@@ -1,0 +1,225 @@
+body, html {
+    font-family: 'Lato', sans-serif !important;
+    overflow-x: hidden;
+}
+
+.padded {
+    padding: 40px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+header {
+    background: #fff;
+    overflow: auto;
+    box-shadow: 1px 4px 20px -1px rgba(0, 0, 0, 0.1);
+    top: -100px;
+    transition: all 0.3s ease;
+}
+
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    overflow: unset;
+}
+
+
+header .top-logo-wrapper {
+    position: relative;
+}
+
+header .top-logo-wrapper img {
+    width: 100%;
+    position: relative;
+    top: 16px;
+}
+
+header div.min-title {
+    position: absolute;
+    left: 95px;
+    top: 14px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+header div.mobile-menu {
+    position: absolute;
+    display: none; 
+    top: 0;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    z-index: -100;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+
+header div.mobile-menu.seen {
+    display: block;
+    top: 70px;
+    opacity: 1;
+    height: unset;
+    overflow: unset;
+    z-index: 15;
+}
+
+header div.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header div.mobile-menu ul li {
+    padding: 10px 0; 
+    border-top: 1px solid #eee;
+    font-size: 18px; 
+}
+
+header div.mobile-menu ul li:first-child {
+    border-top: none;
+}
+
+header div.mobile-menu ul li a {
+    color: #222;
+    text-decoration: none;
+    display: block; 
+}
+
+header ul.top-menu {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul.top-menu li {
+    float: left;
+    padding: 25px 20px;
+    color: #222;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease-in;
+}
+
+header ul.top-menu li a {
+    color: unset;
+    text-decoration: none;
+}
+
+header ul.top-menu li:hover, header ul.top-menu li.active {
+    /* background: #f5f5f5; */
+    background: #f7901d;
+    color: #fff;
+}
+
+header .bars {
+    position: absolute;
+    right: 0px;
+    top: 25px;
+    z-index: 11;
+    display: none;
+}
+
+header .bars i {
+    font-size: 25px;
+}
+
+.alert-information {
+    background-color: #eb2b15;
+    padding: 15px;
+    font-size: 21px;
+    font-weight: bold; 
+    color: #fff;    
+    
+}
+
+.gallery{
+    min-height: 100vh;
+    background:#eee;
+    padding-bottom: 100px;
+}
+
+
+.gallery .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .image-container .image{
+    height:250px;
+    width: 350px;
+    overflow: hidden;
+    border:15px solid #fff;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    margin: 20px;
+}
+
+.gallery .image-container .image img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.gallery .image-container .image:hover img{
+    transform: scale(1.4);
+}
+
+
+footer {
+    background: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 992px) {
+
+    header .bars {
+        position: absolute;
+        right: 0px;
+        top: 25px;
+        z-index: 11;
+        align-items: center;
+
+    }
+    header .bars i {
+        font-size: 25px;
+        float: right;
+
+    }
+
+    header {
+        height: 70px;
+    }
+
+    header div.row div.col-md-9 {
+        display: none;
+    }
+
+    header .bars {
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    header .bars {
+        right: 20px;
+    }
+}
